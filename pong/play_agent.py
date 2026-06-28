@@ -14,7 +14,7 @@ hidden_dim = 128
 n_actions = 3
 
 net = QNetwork(state_dim, hidden_dim, n_actions).to(device)
-net.load_state_dict(torch.load("dqn_pong.pt.ep6600", map_location=device))
+net.load_state_dict(torch.load("dqn_pong_final.pt", map_location=device))
 net.eval()
 
 state = env.reset()
